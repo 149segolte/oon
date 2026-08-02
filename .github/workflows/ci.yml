@@ -38,7 +38,7 @@ jobs:
           rustup target add "${{ matrix.target }}"
 
       - name: Cache Cargo files
-        uses: actions/cache@v4
+        uses: actions/cache@v6
         with:
           path: |
             ~/.cargo/registry
@@ -73,6 +73,7 @@ jobs:
               cp "$release_dir/oon.exe" "$output/"
               cp "$release_dir/oon.dll" "$output/"
               cp "$release_dir/oon.lib" "$output/"
+              ;;
 
             macOS)
               cp "$release_dir/oon" "$output/"
