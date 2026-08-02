@@ -1,0 +1,28 @@
+[package]
+name = "oon"
+version = "1.0.0"
+edition = "2024"
+rust-version = "1.95"
+description = "Object Overlay Notation 1.0 compiler and evaluator"
+license = "MPL-2.0"
+
+[lib]
+crate-type = ["rlib", "staticlib", "cdylib"]
+
+[[bin]]
+name = "oon"
+path = "src/main.rs"
+
+[dependencies]
+antlr-rust-runtime = "=0.23.0"
+indexmap = { version = "2.11", features = ["serde"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = { version = "1.0", features = ["preserve_order"] }
+
+[dev-dependencies]
+tempfile = "3.20"
+
+[profile.release]
+lto = true
+codegen-units = 1
+strip = true

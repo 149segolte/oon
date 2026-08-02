@@ -1,0 +1,38 @@
+# Declarations may refer forward.
+schema config = {
+    profile = profile;
+    packages = list<package> key name;
+    labels = map<string>;
+    source? = source;
+    coordinates = tuple<float; float;>;
+    mode = "debug" | "release";
+};
+
+type profile = {
+    name = string;
+    active = bool;
+    nickname? = string;
+};
+
+type package = {
+    name = string;
+    version = int;
+    metadata = map<any>;
+};
+
+type source = tagged {
+    tag = kind;
+    common = {
+        label = string;
+    };
+    variants = {
+        file = {
+            path = string;
+        };
+        service = {
+            port = int;
+        };
+        disabled = {};
+    };
+};
+

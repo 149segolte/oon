@@ -1,0 +1,47 @@
+{
+  "version": 1,
+  "fixedLookahead": null,
+  "grammars": [
+    {
+      "name": "OonParser",
+      "summary": {"total": 35, "ll1": 30, "fixed": 0, "adaptive": 5},
+      "decisions": [
+        {"decision": 0, "rule": "schemaDocument", "state": 88, "tier": "ll1"},
+        {"decision": 1, "rule": "schemaDocument", "state": 90, "tier": "ll1"},
+        {"decision": 2, "rule": "overlayDocument", "state": 111, "tier": "ll1"},
+        {"decision": 3, "rule": "typeExpression", "state": 132, "tier": "ll1"},
+        {"decision": 4, "rule": "keyedType", "state": 138, "tier": "ll1"},
+        {"decision": 5, "rule": "primaryType", "state": 152, "tier": "adaptive", "reason": "not-disjoint", "probedLookahead": 1},
+        {"decision": 6, "rule": "literalType", "state": 160, "tier": "ll1"},
+        {"decision": 7, "rule": "signedNumber", "state": 163, "tier": "ll1"},
+        {"decision": 8, "rule": "objectType", "state": 171, "tier": "ll1"},
+        {"decision": 9, "rule": "fieldDeclaration", "state": 178, "tier": "ll1"},
+        {"decision": 10, "rule": "tupleType", "state": 201, "tier": "ll1"},
+        {"decision": 11, "rule": "taggedType", "state": 217, "tier": "ll1"},
+        {"decision": 12, "rule": "objectShape", "state": 227, "tier": "ll1"},
+        {"decision": 13, "rule": "variantBlock", "state": 233, "tier": "ll1"},
+        {"decision": 14, "rule": "block", "state": 246, "tier": "ll1"},
+        {"decision": 15, "rule": "statement", "state": 254, "tier": "ll1"},
+        {"decision": 16, "rule": "action", "state": 277, "tier": "ll1"},
+        {"decision": 17, "rule": "conditional", "state": 289, "tier": "adaptive", "reason": "not-disjoint", "probedLookahead": 1},
+        {"decision": 18, "rule": "conditional", "state": 294, "tier": "ll1"},
+        {"decision": 19, "rule": "path", "state": 311, "tier": "ll1"},
+        {"decision": 20, "rule": "path", "state": 314, "tier": "adaptive", "reason": "not-disjoint", "probedLookahead": 1},
+        {"decision": 21, "rule": "pathSegment", "state": 319, "tier": "ll1"},
+        {"decision": 22, "rule": "orExpression", "state": 328, "tier": "ll1"},
+        {"decision": 23, "rule": "andExpression", "state": 336, "tier": "ll1"},
+        {"decision": 24, "rule": "equalityExpression", "state": 344, "tier": "ll1"},
+        {"decision": 25, "rule": "comparisonExpression", "state": 352, "tier": "ll1"},
+        {"decision": 26, "rule": "additiveExpression", "state": 360, "tier": "ll1"},
+        {"decision": 27, "rule": "multiplicativeExpression", "state": 368, "tier": "ll1"},
+        {"decision": 28, "rule": "unaryExpression", "state": 374, "tier": "adaptive", "reason": "not-disjoint", "probedLookahead": 1},
+        {"decision": 29, "rule": "primaryExpression", "state": 390, "tier": "adaptive", "reason": "not-disjoint", "probedLookahead": 1},
+        {"decision": 30, "rule": "objectLiteral", "state": 396, "tier": "ll1"},
+        {"decision": 31, "rule": "relativePath", "state": 408, "tier": "ll1"},
+        {"decision": 32, "rule": "relativePath", "state": 414, "tier": "ll1"},
+        {"decision": 33, "rule": "listLiteral", "state": 423, "tier": "ll1"},
+        {"decision": 34, "rule": "tupleLiteral", "state": 434, "tier": "ll1"}
+      ]
+    }
+  ]
+}
